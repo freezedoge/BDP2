@@ -1,0 +1,238 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    background: linear-gradient(135deg, #ffcfd6 0%, #fbc0d4 50%, #f8b2ca 100%);
+    color: #d81b60;
+    overflow-x: hidden;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.container{
+    position: relative;
+    max-width: 800px;
+    width: 90%;
+    /* background-color: rgba(255, 255, 255, 0.95); */
+    background-color: rgb(0, 0, 0);
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(216, 27, 96, 0.3);
+    padding: 30px;
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+    backdrop-filter: blur(5px);
+    border: 1px solid rgba(255, 255, 255, 0.3);;
+}
+
+/* Step1 *//* Step1 *//* Step1 *//* Step1 *//* Step1 *//* Step1 *//* Step1 *//* Step1 *//* Step1 *//* Step1 *//* Step1 *//* Step1 *//* Step1 *//* Step1 *//* Step1 *//* Step1 *//* Step1 *//* Step1 *//* Step1 *//* Step1 *//* Step1 *//* Step1 *//* Step1 *//* Step1 *//* Step1 *//* Step1 */
+/* Step1 *//* Step1 *//* Step1 *//* Step1 *//* Step1 *//* Step1 *//* Step1 *//* Step1 *//* Step1 *//* Step1 *//* Step1 *//* Step1 *//* Step1 *//* Step1 *//* Step1 *//* Step1 *//* Step1 *//* Step1 *//* Step1 *//* Step1 *//* Step1 *//* Step1 *//* Step1 *//* Step1 *//* Step1 *//* Step1 *//* Step1 *//* Step1 *//* Step1 *//* Step1 */
+
+.progress-bar {
+    width: 100%;
+    height: 10px;
+    background-color: #f8bbd0;
+    border-radius: 5px;
+    margin: 25px 0;
+    overflow: hidden;
+    box-shadow: inset 4px -8px 3px rgba(0, 0, 0, 0.1);
+}
+.progress {
+    height: 100%;
+    background: linear-gradient(to right, #f06292, #d81b60);
+    width: 0%;
+    transition: width 0.8s cubic-bezier(0.65, 0, 0.35, 1) ease-in; 
+    border-radius: 5px;
+    animation: fill 1.2s ease-in;
+}
+
+.step {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Optional: centers image and button */
+    text-align: center;
+    position: relative;
+}
+#step1 p:nth-of-type(2){
+    margin-bottom: 1em;
+}
+.btn {
+    background: linear-gradient(45deg, #d81b60, #ff4081);
+    color: white;
+    border: none;
+    padding: 15px 30px;
+    border-radius: 50px;
+    font-size: 1.1rem;
+    cursor: pointer;
+    margin-top: 25px;
+    transition: all 0.3s;
+    box-shadow: 0 4px 15px rgba(216, 27, 96, 0.4);
+    font-weight: 600;
+    letter-spacing: 1px;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+    
+}
+.center{
+    /* border: 2px red dotted; */
+    width: 500px;
+    height: 400px;
+    position: relative;
+}
+.under{
+    color: white;
+    background-color: gray;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    margin: 0 auto;
+    text-align: center;
+    border-radius: 10px;
+    /* overflow: hidden; */
+    /* padding: 2em; */
+}
+.pic1{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+}
+@property --angle{
+    syntax: "<angle>";
+    initial-value: 0deg;
+    inherits: false;
+}
+.under::after, .under::before{
+    content: '';
+    position: absolute;    
+    height: 100%;
+    width: 100%;
+    /* background-image: conic-gradient(rgb(248, 184, 240), rgb(242, 41, 165), rgb(235, 57, 238), rgb(248, 184, 240)); */
+    background-image: conic-gradient(from var(--angle), rgb(236, 233, 235), rgb(238, 169, 211), rgb(230, 128, 232), rgb(232, 145, 220),rgb(236, 233, 235));
+    top: 50%;
+    left: 50%;
+    translate: -50% -50%;
+    z-index: -5;
+    padding: 3px;
+    border-radius: 10px;
+    animation: 3s spin linear infinite;
+
+}
+.under::before{
+    filter: blur(1rem);
+    opacity: 1;
+}
+/* step 2 *//* step 2 *//* step 2 *//* step 2 *//* step 2 *//* step 2 *//* step 2 *//* step 2 *//* step 2 *//* step 2 *//* step 2 *//* step 2 *//* step 2 *//* step 2 *//* step 2 *//* step 2 *//* step 2 */
+/* step 2 *//* step 2 *//* step 2 *//* step 2 *//* step 2 *//* step 2 *//* step 2 *//* step 2 *//* step 2 *//* step 2 *//* step 2 *//* step 2 *//* step 2 *//* step 2 *//* step 2 *//* step 2 *//* step 2 */
+.step2{
+    display: flex;
+}
+    /* #back, #next{
+        margin: 0 1em 0 1em;
+    } */
+
+.slider-wrapper{
+    position: relative;
+    height: 400px;
+    width: 740px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    
+    /* border: 2px green dotted    ; */
+}
+.slider{
+    display: flex;
+    aspect-ratio: 16/9;
+    overflow: auto;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+    box-shadow: 0 4px 15px rgba(216, 27, 96, 0.4);
+    border-radius: 10px;
+    height: 100%;
+    width: 70%;
+    /* margin: 1em; */
+    /* margin: 0 1em 1em 1em;! */
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;     /* Firefox */
+    transition: transform 0.5s ease, filter 0.5s ease;
+    animation: spin 5s linear infinite;
+}
+.slider::-webkit-scrollbar {
+    display: none;
+}
+.slider img{
+    flex: 1 0 100%;
+    scroll-snap-align: start;
+    object-fit: cover;
+}
+.slider:hover{
+    animation-play-state: paused;
+    transform: scale(1.1);
+    filter: brightness(1.1);
+}
+.slider::after, .slider::before{
+    content: '';
+    position: absolute;    
+    height: 100%;
+    width: 70%;
+    /* background-image: conic-gradient(rgb(248, 184, 240), rgb(242, 41, 165), rgb(235, 57, 238), rgb(248, 184, 240)); */
+    background-image: conic-gradient(from var(--angle), rgb(236, 233, 235), rgb(238, 169, 211), rgb(230, 128, 232), rgb(232, 145, 220),rgb(236, 233, 235));
+    top: 50%;
+    left: 50%;
+    translate: -50% -50%;
+    z-index: -5;
+    padding: 3px;
+    border-radius: 10px;
+    animation: 3s spin linear infinite;
+}
+.slider::before{
+    filter: blur(1rem);
+    opacity: 1;
+}
+.slider-nav{
+    display: flex;
+    column-gap: 1em;
+    position: absolute;
+    bottom: .5em;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1;
+}
+.slider-nav a{
+    width: .5em;
+    height: .5em;
+    border-radius: 50%;
+    background-color: #f8bbd0;  
+    /* background-color: black; */
+    opacity: .75;
+    transition: opacity ease 250ms;
+}
+.slider-nav a:hover{
+    opacity: 1;
+}
+
+
+@keyframes spin{
+    from{
+        --angle: 0deg;
+    }
+    to{
+        --angle: 360deg;
+    }
+}
+
+
+
+/* STEP 3 *//* STEP 3 *//* STEP 3 *//* STEP 3 *//*  STEP 3  *//* STEP 3 *//* STEP 3 *//* STEP 3 *//* STEP 3 *//* STEP 3 *//* STEP 3 *//* STEP 3 *//* STEP 3 *//* STEP 3 *//*  STEP 3  *//* STEP 3 *//* STEP 3 *//* STEP 3 *//* STEP 3 *//* STEP 3 */
+/* STEP 3 *//* STEP 3 *//* STEP 3 *//* STEP 3 *//*  STEP 3  *//* STEP 3 *//* STEP 3 *//* STEP 3 *//* STEP 3 *//* STEP 3 *//* STEP 3 *//* STEP 3 *//* STEP 3 *//* STEP 3 *//*  STEP 3  *//* STEP 3 *//* STEP 3 *//* STEP 3 *//* STEP 3 *//* STEP 3 */
+/* STEP 3 *//* STEP 3 *//* STEP 3 *//* STEP 3 *//*  STEP 3  *//* STEP 3 *//* STEP 3 *//* STEP 3 *//* STEP 3 *//* STEP 3 *//* STEP 3 *//* STEP 3 *//* STEP 3 *//* STEP 3 *//*  STEP 3  *//* STEP 3 *//* STEP 3 *//* STEP 3 *//* STEP 3 *//* STEP 3 */
+
